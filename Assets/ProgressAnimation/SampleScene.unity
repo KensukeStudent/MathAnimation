@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670bb368366584c4584983b327b1017d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  duration: 10
   p: 1
   slider: {fileID: 492966496}
   lineRenderer: {fileID: 442722404}
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670bb368366584c4584983b327b1017d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  duration: 10
   p: 2
   slider: {fileID: 1668130364}
   lineRenderer: {fileID: 1781091465}

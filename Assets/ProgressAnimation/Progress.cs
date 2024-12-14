@@ -5,8 +5,8 @@ public class Progress : MonoBehaviour
 {
     private float progress;
 
-    [SerializeField]
-    private float speed;
+    [Header("秒数"), SerializeField]
+    private float duration;
 
     [SerializeField, Min(1)]
     private int p;
@@ -33,7 +33,7 @@ public class Progress : MonoBehaviour
 
     private void Update()
     {
-        progress += Time.deltaTime * speed;
+        progress += Time.deltaTime / duration;
 
         float ret = Mathf.Pow(progress, p);
         ret = Mathf.Clamp01(ret);

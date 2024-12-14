@@ -23,7 +23,7 @@ public class SmoothLookAtPlayer2D : MonoBehaviour
 
     private void Start()
     {
-        startAngle = UnityEngine.Random.Range(-90, 90);
+        startAngle = transform.eulerAngles.z;
 
         if (transform.position.x > player.position.x)
         {
@@ -58,6 +58,11 @@ public class SmoothLookAtPlayer2D : MonoBehaviour
             if (targetAngle < 1)
             {
                 targetAngle += 360;
+            }
+
+            if (targetAngle > 360)
+            {
+                targetAngle -= 360;
             }
 
             Vector3 newEulerAngles = transform.eulerAngles;
