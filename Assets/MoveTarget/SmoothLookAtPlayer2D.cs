@@ -53,12 +53,12 @@ public class SmoothLookAtPlayer2D : MonoBehaviour
 
             // 目標の角度を計算（ラジアン -> ディグリー変換）
             targetAngle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+            targetAngle -= 90;
 
-            if (targetAngle < 0)
+            if (targetAngle < 1)
             {
                 targetAngle += 360;
             }
-            targetAngle -= 90;
 
             Vector3 newEulerAngles = transform.eulerAngles;
 
